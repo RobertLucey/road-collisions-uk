@@ -1,11 +1,9 @@
-Road Collisions Ireland
-=======================
+Road Collisions UK
+==================
 
 | Region           | years       |
 | ---------------- | ----------- |
-| United Kingdom   | 2016 - 2021   |
-
-There is UK data from the 70s to present but it's very big. I'll work on making it so it is small enough for pypi when I have the time
+| United Kingdom   | 1979 - 2020   |
 
 # Quickstart
 
