@@ -4,7 +4,8 @@ from road_collisions_uk.models.collision import Collisions
 
 
 def main():
-    collisions = Collisions.load_all(region='uk')
+    print('NOTE: Since UK data is so large, only loading data from 2020')
+    collisions = Collisions.load_all(region='uk', year=2020)
 
     logger.info('Loaded %s collisions', (len(collisions)))
     logger.info('Do something with the data in the variable \'collisions\'...')

@@ -4,6 +4,7 @@ from setuptools import (
 )
 
 INSTALL_REQUIRES = (
+    'boto3',
     'road-collisions-base'
 )
 
@@ -17,11 +18,6 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     install_requires=INSTALL_REQUIRES,
-    package_data={
-        'road_collisions_uk': [
-            'resources/uk/uk.csv.tgz'
-        ]
-    },
     entry_points={
         'console_scripts': [
             'load_road_collisions_uk = road_collisions_uk.bin.load:main',
