@@ -214,41 +214,40 @@ class Collision(RawCollision):
     def __init__(self, **kwargs):
 
         self.accident_index = kwargs['accident_index']
+        self.accident_severity = int(kwargs['accident_severity'])
         self.accident_year = int(kwargs['accident_year'])
 
-        self.location_easting_osgr = kwargs['location_easting_osgr']
-        self.location_northing_osgr = kwargs['location_northing_osgr']
-        self.longitude = kwargs['longitude']
-        self.latitude = kwargs['latitude']
-        self.police_force = kwargs['police_force']
-        self.accident_severity = kwargs['accident_severity']
-        self.number_of_vehicles = kwargs['number_of_vehicles']
-        self.number_of_casualties = kwargs['number_of_casualties']
+        self.carriageway_hazards = int(kwargs['carriageway_hazards'])
         self.date = kwargs['date']
-        # skipping day of week as we have date
-        self.time = kwargs['time']
-        self.local_authority_district = kwargs['local_authority_district']
-        self.local_authority_ons_district = kwargs['local_authority_ons_district']
+        self.did_police_officer_attend_scene_of_accident = int(kwargs['did_police_officer_attend_scene_of_accident'])
+        self.first_road_class = int(kwargs['first_road_class'])
+        self.first_road_number = int(kwargs['first_road_number'])
+        self.junction_control = int(kwargs['junction_control'])
+        self.junction_detail = int(kwargs['junction_detail'])
+        self.latitude = float(kwargs['latitude']) if kwargs['latitude'] != 'NULL' else None
+        self.light_conditions = int(kwargs['light_conditions'])
+        self.local_authority_district = int(kwargs['local_authority_district'])
         self.local_authority_highway = kwargs['local_authority_highway']
-        self.first_road_class = kwargs['first_road_class']
-        self.first_road_number = kwargs['first_road_number']
-        self.road_type = kwargs['road_type']
-        self.speed_limit = kwargs['speed_limit']
-        self.junction_detail = kwargs['junction_detail']
-        self.junction_control = kwargs['junction_control']
-        self.second_road_class = kwargs['second_road_class']
-        self.second_road_number = kwargs['second_road_number']
-        self.pedestrian_crossing_human_control = kwargs['pedestrian_crossing_human_control']
-        self.pedestrian_crossing_physical_facilities = kwargs['pedestrian_crossing_physical_facilities']
-        self.light_conditions = kwargs['light_conditions']
-        self.weather_conditions = kwargs['weather_conditions']
-        self.road_surface_conditions = kwargs['road_surface_conditions']
-        self.special_conditions_at_site = kwargs['special_conditions_at_site']
-        self.carriageway_hazards = kwargs['carriageway_hazards']
-        self.urban_or_rural_area = kwargs['urban_or_rural_area']
-        self.did_police_officer_attend_scene_of_accident = kwargs['did_police_officer_attend_scene_of_accident']
-        self.trunk_road_flag = kwargs['trunk_road_flag']
+        self.local_authority_ons_district = kwargs['local_authority_ons_district']
+        self.location_easting_osgr = int(kwargs['location_easting_osgr']) if kwargs['latitude'] != 'NULL' else None
+        self.location_northing_osgr = int(kwargs['location_northing_osgr']) if kwargs['latitude'] != 'NULL' else None
+        self.longitude = float(kwargs['longitude']) if kwargs['latitude'] != 'NULL' else None
         self.lsoa_of_accident_location = kwargs['lsoa_of_accident_location']
+        self.number_of_casualties = int(kwargs['number_of_casualties'])
+        self.number_of_vehicles = int(kwargs['number_of_vehicles'])
+        self.pedestrian_crossing_human_control = int(kwargs['pedestrian_crossing_human_control'])
+        self.pedestrian_crossing_physical_facilities = int(kwargs['pedestrian_crossing_physical_facilities'])
+        self.police_force = int(kwargs['police_force'])
+        self.road_surface_conditions = int(kwargs['road_surface_conditions'])
+        self.road_type = int(kwargs['road_type'])
+        self.second_road_class = int(kwargs['second_road_class'])
+        self.second_road_number = int(kwargs['second_road_number'])
+        self.special_conditions_at_site = int(kwargs['special_conditions_at_site'])
+        self.speed_limit = int(kwargs['speed_limit'])
+        self.time = kwargs['time']
+        self.trunk_road_flag = int(kwargs['trunk_road_flag'])
+        self.urban_or_rural_area = int(kwargs['urban_or_rural_area'])
+        self.weather_conditions = int(kwargs['weather_conditions'])
 
         self.casualties = kwargs['casualties']
         self.vehicles = kwargs['vehicles']

@@ -78,31 +78,31 @@ class Vehicle():
     ]
 
     def __init__(self, *args, **kwargs):
-        self.age_band_of_driver = kwargs['age_band_of_driver']
-        self.age_of_driver = kwargs['age_of_driver']
-        self.age_of_vehicle = kwargs['age_of_vehicle']
-        self.driver_home_area_type = kwargs['driver_home_area_type']
-        self.driver_imd_decile = kwargs['driver_imd_decile']
-        self.engine_capacity_cc = kwargs['engine_capacity_cc']
-        self.first_point_of_impact = kwargs['first_point_of_impact']
+        self.age_band_of_driver = int(kwargs['age_band_of_driver'])
+        self.age_of_driver = int(kwargs['age_of_driver'])
+        self.age_of_vehicle = int(kwargs['age_of_vehicle'])
+        self.driver_home_area_type = int(kwargs['driver_home_area_type'])
+        self.driver_imd_decile = int(kwargs['driver_imd_decile'])
+        self.engine_capacity_cc = int(kwargs['engine_capacity_cc'])  # is this ever a float?
+        self.first_point_of_impact = int(kwargs['first_point_of_impact'])
         self.generic_make_model = kwargs['generic_make_model']
-        self.hit_object_in_carriageway = kwargs['hit_object_in_carriageway']
-        self.hit_object_off_carriageway = kwargs['hit_object_off_carriageway']
-        self.journey_purpose_of_driver = kwargs['journey_purpose_of_driver']
-        self.junction_location = kwargs['junction_location']
-        self.propulsion_code = kwargs['propulsion_code']
-        self.sex_of_driver = kwargs['sex_of_driver']
-        self.skidding_and_overturning = kwargs['skidding_and_overturning']
-        self.towing_and_articulation = kwargs['towing_and_articulation']
+        self.hit_object_in_carriageway = int(kwargs['hit_object_in_carriageway'])
+        self.hit_object_off_carriageway = int(kwargs['hit_object_off_carriageway'])
+        self.journey_purpose_of_driver = int(kwargs['journey_purpose_of_driver'])
+        self.junction_location = int(kwargs['junction_location'])
+        self.propulsion_code = int(kwargs['propulsion_code'])
+        self.sex_of_driver = int(kwargs['sex_of_driver'])
+        self.skidding_and_overturning = int(kwargs['skidding_and_overturning'])
+        self.towing_and_articulation = int(kwargs['towing_and_articulation'])
 
-        self.vehicle_direction_from = kwargs['vehicle_direction_from']
-        self.vehicle_direction_to = kwargs['vehicle_direction_to']
-        self.vehicle_leaving_carriageway = kwargs['vehicle_leaving_carriageway']
-        self.vehicle_left_hand_drive = kwargs['vehicle_left_hand_drive']
-        self.vehicle_location_restricted_lane = kwargs['vehicle_location_restricted_lane']
-        self.vehicle_manoeuvre = kwargs['vehicle_manoeuvre']
-        self.vehicle_reference = kwargs['vehicle_reference']
-        self.vehicle_type = kwargs['vehicle_type']
+        self.vehicle_direction_from = int(kwargs['vehicle_direction_from'])
+        self.vehicle_direction_to = int(kwargs['vehicle_direction_to'])
+        self.vehicle_leaving_carriageway = int(kwargs['vehicle_leaving_carriageway'])
+        self.vehicle_left_hand_drive = int(kwargs['vehicle_left_hand_drive'])
+        self.vehicle_location_restricted_lane = int(kwargs['vehicle_location_restricted_lane'])
+        self.vehicle_manoeuvre = int(kwargs['vehicle_manoeuvre'])
+        self.vehicle_reference = int(kwargs['vehicle_reference'])
+        self.vehicle_type = int(kwargs['vehicle_type'])
 
     def serialize(self):
         return {

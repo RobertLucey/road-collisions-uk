@@ -69,21 +69,21 @@ class Casualty():
     ]
 
     def __init__(self, *args, **kwargs):
-        self.vehicle_reference = kwargs['vehicle_reference']
-        self.casualty_reference = kwargs['casualty_reference']
-        self.casualty_class = kwargs['casualty_class']
-        self.sex_of_casualty = kwargs['sex_of_casualty']
-        self.age_of_casualty = kwargs['age_of_casualty']
-        self.age_band_of_casualty = kwargs['age_band_of_casualty']
-        self.casualty_severity = kwargs['casualty_severity']
-        self.pedestrian_location = kwargs['pedestrian_location']
-        self.pedestrian_movement = kwargs['pedestrian_movement']
-        self.car_passenger = kwargs['car_passenger']
-        self.bus_or_coach_passenger = kwargs['bus_or_coach_passenger']
-        self.pedestrian_road_maintenance_worker = kwargs['pedestrian_road_maintenance_worker']
-        self.casualty_type = kwargs['casualty_type']
-        self.casualty_home_area_type = kwargs['casualty_home_area_type']
-        self.casualty_imd_decile = kwargs['casualty_imd_decile']
+        self.vehicle_reference = int(kwargs['vehicle_reference'])
+        self.casualty_reference = int(kwargs['casualty_reference'])
+        self.casualty_class = int(kwargs['casualty_class'])
+        self.sex_of_casualty = int(kwargs['sex_of_casualty'])
+        self.age_of_casualty = int(kwargs['age_of_casualty'])
+        self.age_band_of_casualty = int(kwargs['age_band_of_casualty'])
+        self.casualty_severity = int(kwargs['casualty_severity'])
+        self.pedestrian_location = int(kwargs['pedestrian_location'])
+        self.pedestrian_movement = int(kwargs['pedestrian_movement'])
+        self.car_passenger = int(kwargs['car_passenger'])
+        self.bus_or_coach_passenger = int(kwargs['bus_or_coach_passenger'])
+        self.pedestrian_road_maintenance_worker = int(kwargs['pedestrian_road_maintenance_worker'])
+        self.casualty_type = int(kwargs['casualty_type'])
+        self.casualty_home_area_type = int(kwargs['casualty_home_area_type'])
+        self.casualty_imd_decile = int(kwargs['casualty_imd_decile'])
 
     def serialize(self):
         return {
