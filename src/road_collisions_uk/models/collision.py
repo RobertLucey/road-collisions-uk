@@ -161,11 +161,11 @@ class Collisions():
         )
 
     @staticmethod
-    def load_all(region=None, year=None):
+    def load_all(year=None):
         import road_collisions_uk
         return Collisions.from_dir(
             '/opt/road_collisions/',
-            region=region,
+            region='uk',
             year=year
         )
 
