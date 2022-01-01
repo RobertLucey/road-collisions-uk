@@ -10,7 +10,7 @@ INSTALL_REQUIRES = (
 
 setup(
     name='road_collisions_uk',
-    version='0.0.2',
+    version='0.0.3',
     python_requires='>=3.6',
     description='Road collision data for the UK',
     author='Robert Lucey',
